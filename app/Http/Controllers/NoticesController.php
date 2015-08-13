@@ -9,6 +9,7 @@ use Mail;
 use Auth;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreNoticeRequest;
 
 use App\Http\Controllers\Controller;
 
@@ -69,7 +70,7 @@ class NoticesController extends Controller {
      * @param Request $request
      * @Return  \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
     */
-	public function store(Request $request) 
+	public function store(StoreNoticeRequest $request)
 	{
 		$notice = $this->createNotice($request);
 

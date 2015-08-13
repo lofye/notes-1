@@ -11,16 +11,17 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
- mix.sass('app.scss');
+elixir(function (mix) {
 
- mix.scripts([
-  'pubsub.js',
-  'ajax-helpers.js',
-  'app.js'
- ], null, 'public/js')
- mix.styles([
-  'vendor/bootstrap.css',
-  'app.css'
- ], null, 'public/css')
+	mix.sass('app.scss')
+	.styles([
+		'vendor/bootstrap.css',
+		'app.css'
+	], null, 'public/css')
+	.scripts([
+		'pubsub.js',
+		'ajax-helpers.js',
+		'app.js'
+	], null, 'public/js');
+
 });
